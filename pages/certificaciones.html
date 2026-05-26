@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificaciones | Thomas Castillo</title>
+  <link rel="icon" href="../assets/img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="mainNav" aria-label="Navegación principal">
+  <a class="logo" href="../index.html">Thomas</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú de navegación">
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+  </button>
+  <ul id="navMenu" class="nav-links" role="list">
+    <li><a href="sobre-mi.html">Sobre mí</a></li>
+    <li><a href="habilidades.html">Habilidades</a></li>
+    <li><a href="curriculum.html">Currículum</a></li>
+    <li><a href="certificaciones.html">Certificaciones</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li class="nav-cta"><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <div class="nav-backdrop" hidden></div>
+</nav>
+
+<main>
+  <section id="certifications" class="certifications panel bg-stack" aria-labelledby="certifications-title">
+    <div class="cert-head">
+      <div class="section-title">
+        <h2 id="certifications-title" class="reveal" data-delay="0.05">Certificaciones</h2>
+        <article class="reveal" data-delay="0.10">
+          <p>Resumen de credenciales en Cloud, Redes, Linux y Metodologías Ágiles. Filtra por categoría o ábrelas para ver en detalle.</p>
+        </article>
+      </div>
+      <article class="reveal" data-delay="0.05">
+        <div class="cert-tabs" role="tablist" aria-label="Filtrar certificaciones">
+          <button class="tab" role="tab" aria-selected="true" data-filter="all">Todas</button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="cloud">Cloud</button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="redes">Redes</button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="linux">Linux</button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="agile">Ágil</button>
+          <button class="tab" role="tab" aria-selected="false" data-filter="dev">Dev</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="cert-grid" id="certGrid">
+
+      <article class="c-card reveal" data-delay="0.06" data-cat="redes" data-date="202605">
+        <div class="c-media"><img src="../assets/img/certificaciones/Hackeretico.jpg" alt="Hacker Ético — Cisco Networking Academy" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">Hacker Ético</h3>
+          <div class="c-issuer">Cisco NetAcad · <span class="c-date">May 2026</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/Hackeretico.jpg" data-title="Hacker Ético" data-issuer="Cisco NetAcad">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.08" data-cat="dev" data-date="202510">
+        <div class="c-media"><img src="../assets/img/certificaciones/IntroductiontoJavaScript.jpg" alt="Introducción a JavaScript — SoloLearn" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">Introducción a JavaScript</h3>
+          <div class="c-issuer">SoloLearn · <span class="c-date">Oct 2025</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/IntroductiontoJavaScript.jpg" data-title="Introducción a JavaScript" data-issuer="SoloLearn">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.10" data-cat="dev" data-date="202510">
+        <div class="c-media"><img src="../assets/img/certificaciones/Angular.jpg" alt="Angular — SoloLearn" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">Angular</h3>
+          <div class="c-issuer">SoloLearn · <span class="c-date">Oct 2025</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/Angular.jpg" data-title="Angular" data-issuer="SoloLearn">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.12" data-cat="dev" data-date="202510">
+        <div class="c-media"><img src="../assets/img/certificaciones/JavaScriptIntermediate.jpg" alt="JavaScript Intermediate — SoloLearn" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">JavaScript Intermediate</h3>
+          <div class="c-issuer">SoloLearn · <span class="c-date">Oct 2025</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/JavaScriptIntermediate.jpg" data-title="JavaScript Intermediate" data-issuer="SoloLearn">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.14" data-cat="dev" data-date="202508">
+        <div class="c-media"><img src="../assets/img/certificaciones/IntroductiontoHTML.jpg" alt="Introducción a HTML — SoloLearn" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">Introducción a HTML</h3>
+          <div class="c-issuer">SoloLearn · <span class="c-date">Ago 2025</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/IntroductiontoHTML.jpg" data-title="Introducción a HTML" data-issuer="SoloLearn">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.16" data-cat="cloud" data-date="202411">
+        <div class="c-media"><img src="../assets/img/certificaciones/google-cloud.jpg" alt="Google Cloud Computing Foundations" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">Google Cloud Computing Foundations</h3>
+          <div class="c-issuer">Google · <span class="c-date">Nov 2024</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/google-cloud.jpg" data-title="Google Cloud Computing Foundations" data-issuer="Google">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.18" data-cat="agile" data-date="202410">
+        <div class="c-media"><img src="../assets/img/certificaciones/scrum.jpg" alt="Scrum Fundamentals Certified" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">Scrum Fundamentals Certified</h3>
+          <div class="c-issuer">SCRUMstudy · <span class="c-date">Oct 2024</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/scrum.jpg" data-title="Scrum Fundamentals Certified" data-issuer="SCRUMstudy">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.20" data-cat="redes" data-date="202410">
+        <div class="c-media"><img src="../assets/img/certificaciones/ciberseguridad.jpg" alt="Introducción a la Seguridad Cibernética" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">Introducción a la Seguridad Cibernética</h3>
+          <div class="c-issuer">Cisco · <span class="c-date">Oct 2024</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/ciberseguridad.jpg" data-title="Introducción a la Seguridad Cibernética" data-issuer="Cisco">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.22" data-cat="linux" data-date="202409">
+        <div class="c-media"><img src="../assets/img/certificaciones/linux-essentials.jpg" alt="NDG Linux Essentials" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">NDG Linux Essentials</h3>
+          <div class="c-issuer">Cisco NetAcad · <span class="c-date">Sep 2024</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/linux-essentials.jpg" data-title="NDG Linux Essentials" data-issuer="Cisco NetAcad">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.24" data-cat="linux" data-date="202408">
+        <div class="c-media"><img src="../assets/img/certificaciones/linux-unhatched.jpg" alt="NDG Linux Unhatched" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">NDG Linux Unhatched</h3>
+          <div class="c-issuer">Cisco NetAcad · <span class="c-date">Ago 2024</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/linux-unhatched.jpg" data-title="NDG Linux Unhatched" data-issuer="Cisco NetAcad">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.26" data-cat="redes" data-date="202405">
+        <div class="c-media"><img src="../assets/img/certificaciones/ccna-srwe.jpg" alt="CCNAv7: Switching, Routing and Wireless Essentials" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">CCNAv7: SRWE</h3>
+          <div class="c-issuer">Cisco · <span class="c-date">May 2024</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/ccna-srwe.jpg" data-title="CCNAv7: Switching, Routing and Wireless Essentials" data-issuer="Cisco">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.28" data-cat="cloud" data-date="202405">
+        <div class="c-media"><img src="../assets/img/certificaciones/oracle-foundations.jpg" alt="Oracle Verified Foundations Associate" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">Oracle Verified Foundations Associate</h3>
+          <div class="c-issuer">Oracle · <span class="c-date">May 2024</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/oracle-foundations.jpg" data-title="Oracle Verified Foundations Associate" data-issuer="Oracle">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.30" data-cat="redes" data-date="202311">
+        <div class="c-media"><img src="../assets/img/certificaciones/ccna-intro.jpg" alt="CCNAv7: Introducción a Redes" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">CCNAv7: Introducción a Redes</h3>
+          <div class="c-issuer">Cisco · <span class="c-date">Nov 2023</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/ccna-intro.jpg" data-title="CCNAv7: Introducción a Redes" data-issuer="Cisco">Ver</button></div></div>
+        </div>
+      </article>
+
+      <article class="c-card reveal" data-delay="0.32" data-cat="cloud" data-date="202305">
+        <div class="c-media"><img src="../assets/img/certificaciones/oracle-statement.jpg" alt="Oracle Statement of Achievement" loading="lazy" decoding="async"></div>
+        <div class="c-body">
+          <h3 class="c-title">Statement of Achievement</h3>
+          <div class="c-issuer">Oracle · <span class="c-date">May 2023</span></div>
+          <div class="c-meta"><span></span><div class="c-actions"><button class="btn-mini" data-view="../assets/img/certificaciones/oracle-statement.jpg" data-title="Statement of Achievement" data-issuer="Oracle">Ver</button></div></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 Thomas Castillo. Todos los derechos reservados.</p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

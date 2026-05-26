@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículum | Thomas Castillo</title>
+  <link rel="icon" href="../assets/img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="mainNav" aria-label="Navegación principal">
+  <a class="logo" href="../index.html">Thomas</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú de navegación">
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+  </button>
+  <ul id="navMenu" class="nav-links" role="list">
+    <li><a href="sobre-mi.html">Sobre mí</a></li>
+    <li><a href="habilidades.html">Habilidades</a></li>
+    <li><a href="curriculum.html">Currículum</a></li>
+    <li><a href="certificaciones.html">Certificaciones</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li class="nav-cta"><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <div class="nav-backdrop" hidden></div>
+</nav>
+
+<main>
+  <section id="resume" class="resume panel bg-stack js-reveal-once" aria-label="Currículum">
+    <div class="section-title">
+      <h2 class="reveal" data-delay="0.05">Currículum</h2>
+      <article class="reveal" data-delay="0.10">
+        <p>Conoce mi perfil profesional, formación académica y habilidades.</p>
+      </article>
+    </div>
+
+    <div class="resume-wrap">
+      <aside>
+        <article class="cv-card reveal" data-delay="0.05">
+          <div class="cv-head">
+            <div class="avatar">
+              <img src="../assets/img/my-profile-img.jpg" alt="Foto de Thomas" width="108" height="108" loading="lazy" decoding="async">
+            </div>
+            <div>
+              <h3>Thomas Castillo</h3>
+              <p class="cv-sub">Desarrollador Full-Stack · UI/UX</p>
+            </div>
+          </div>
+          <ul class="cv-list" aria-label="Datos de contacto" role="list">
+            <li>📍 Bogotá D.C, Colombia</li>
+            <li>📞 +57 301 218 5521</li>
+            <li>✉️ <b id="cvEmail">tc57364@gmail.com</b></li>
+            <li>
+              <a href="https://github.com/thomys57364" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.4rem;color:#24292e;font-weight:700;text-decoration:none;">
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/>
+                </svg>
+                github.com/thomys57364
+              </a>
+            </li>
+          </ul>
+          <div class="cv-cta">
+            <a class="btn primary" href="../assets/cv/Thomas-Castillo.pdf" download>Descargar CV</a>
+            <button class="btn outline" id="cvCopy" type="button">Copiar email</button>
+          </div>
+        </article>
+
+        <article class="cv-card reveal" data-delay="0.12">
+          <h3 style="margin:0 0 .4rem 0;">Stack Clave</h3>
+          <div class="t-badges" aria-label="Tecnologías">
+            <span class="badge-soft">HTML</span>
+            <span class="badge-soft">CSS</span>
+            <span class="badge-soft">JavaScript</span>
+            <span class="badge-soft">PHP</span>
+            <span class="badge-soft">MySQL</span>
+            <span class="badge-soft">MongoDB</span>
+            <span class="badge-soft">Flutter</span>
+            <span class="badge-soft">IA</span>
+            <span class="badge-soft">Mapas Interactivos</span>
+            <span class="badge-soft">Accesibilidad</span>
+            <span class="badge-soft">Tiempo Real</span>
+          </div>
+        </article>
+      </aside>
+
+      <div>
+        <div class="t-group">
+          <h3 class="reveal" data-delay="0.05">Perfil Profesional</h3>
+          <article class="t-item reveal" data-delay="0.10">
+            <p>Estudiante de Ingeniería de Software cursando décimo semestre, con enfoque en el desarrollo Full Stack. Mi formación está orientada a la creación de soluciones tecnológicas, con experiencia en el diseño y desarrollo de aplicaciones web, participando activamente en el ciclo de vida del software: desde el análisis y la construcción hasta el despliegue.</p>
+            <p style="margin-top:.65rem">Me caracterizo por ser una persona responsable, con interés continuo en la mejora técnica y gran pasión por la tecnología. Disfruto explorando nuevas herramientas y lenguajes, y me adapto con facilidad a distintos entornos y desafíos, lo que me permite aprender rápidamente y resolver problemas incluso en áreas donde no cuento con experiencia previa.</p>
+            <p style="margin-top:.65rem">Mi objetivo es seguir fortaleciéndome como desarrollador, aplicando los conocimientos en software, bases de datos, desarrollo web e infraestructura, para crear soluciones eficientes y escalables que generen valor real en proyectos de mayor impacto.</p>
+          </article>
+        </div>
+
+        <div class="t-group">
+          <h3 class="reveal" data-delay="0.14">Estudios Realizados</h3>
+
+          <article class="t-item reveal" data-delay="0.18">
+            <div class="t-meta">
+              <span class="t-role">Bachiller — Énfasis en Matemáticas</span>
+              <span class="t-place">Institución Educativa Inmaculado Corazón de María</span>
+              <span class="t-date">Graduado</span>
+            </div>
+          </article>
+
+          <article class="t-item reveal" data-delay="0.22">
+            <div class="t-meta">
+              <span class="t-role">Ingeniería de Software</span>
+              <span class="t-place">Universidad Manuela Beltrán — Bogotá</span>
+              <span class="t-date">2025 — Actualidad</span>
+            </div>
+            <p>Estudios enfocados en estructuras de datos, programación orientada a objetos, diseño de software, seguridad informática y desarrollo web.</p>
+          </article>
+
+          <article class="t-item reveal" data-delay="0.26">
+            <div class="t-meta">
+              <span class="t-role">Inglés</span>
+              <span class="t-place">Nivel A2 — Básico</span>
+              <span class="t-date">—</span>
+            </div>
+            <div class="t-badges"><span class="badge-soft">A2</span><span class="badge-soft">Básico</span></div>
+          </article>
+        </div>
+
+        <div class="t-group">
+          <h3 class="reveal" data-delay="0.30">Habilidades Blandas</h3>
+          <article class="t-item reveal" data-delay="0.34">
+            <div class="t-badges">
+              <span class="badge-soft">Responsabilidad</span>
+              <span class="badge-soft">Proactividad</span>
+              <span class="badge-soft">Adaptabilidad</span>
+              <span class="badge-soft">Aprendizaje rápido</span>
+              <span class="badge-soft">Trabajo en equipo</span>
+              <span class="badge-soft">Resolución de problemas</span>
+              <span class="badge-soft">Comunicación efectiva</span>
+              <span class="badge-soft">Mejora continua</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 Thomas Castillo. Todos los derechos reservados.</p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Habilidades | Thomas Castillo</title>
+  <link rel="icon" href="../assets/img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="mainNav" aria-label="Navegación principal">
+  <a class="logo" href="../index.html">Thomas</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú de navegación">
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+  </button>
+  <ul id="navMenu" class="nav-links" role="list">
+    <li><a href="sobre-mi.html">Sobre mí</a></li>
+    <li><a href="habilidades.html">Habilidades</a></li>
+    <li><a href="curriculum.html">Currículum</a></li>
+    <li><a href="certificaciones.html">Certificaciones</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li class="nav-cta"><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <div class="nav-backdrop" hidden></div>
+</nav>
+
+<main>
+  <section id="skills" class="skills panel bg-stack" aria-label="Habilidades">
+    <div class="section-title">
+      <h2 class="reveal" data-delay="0.05">Habilidades</h2>
+      <article class="reveal" data-delay="0.10">
+        <p>Conocimientos y herramientas que domino para construir productos modernos, rápidos y elegantes.</p>
+      </article>
+    </div>
+    <div class="skills-grid">
+
+      <article class="skill reveal" data-delay="0.15" data-level="75">
+        <header class="skill-head">
+          <span class="icon-wrap" aria-hidden="true">🧱</span>
+          <h3>HTML</h3>
+          <span class="badge skill-num" aria-label="Nivel">0%</span>
+        </header>
+        <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="fill"></span>
+        </div>
+        <div class="skill-tools" aria-label="Temas">
+          <span class="chip">Semántica</span>
+          <span class="chip">Accesibilidad</span>
+          <span class="chip">SEO</span>
+        </div>
+      </article>
+
+      <article class="skill reveal" data-delay="0.20" data-level="65">
+        <header class="skill-head">
+          <span class="icon-wrap" aria-hidden="true">🎨</span>
+          <h3>CSS</h3>
+          <span class="badge skill-num">0%</span>
+        </header>
+        <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="fill"></span>
+        </div>
+        <div class="skill-tools">
+          <span class="chip">Flex/Grid</span>
+          <span class="chip">Animaciones</span>
+          <span class="chip">Responsive</span>
+        </div>
+      </article>
+
+      <article class="skill reveal" data-delay="0.25" data-level="50">
+        <header class="skill-head">
+          <span class="icon-wrap" aria-hidden="true">⚡️</span>
+          <h3>JavaScript</h3>
+          <span class="badge skill-num">0%</span>
+        </header>
+        <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="fill"></span>
+        </div>
+        <div class="skill-tools">
+          <span class="chip">DOM</span>
+          <span class="chip">Fetch</span>
+          <span class="chip">ES6+</span>
+        </div>
+      </article>
+
+      <article class="skill reveal" data-delay="0.30" data-level="75">
+        <header class="skill-head">
+          <span class="icon-wrap" aria-hidden="true">🐘</span>
+          <h3>PHP</h3>
+          <span class="badge skill-num">0%</span>
+        </header>
+        <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="fill"></span>
+        </div>
+        <div class="skill-tools">
+          <span class="chip">MVC</span>
+          <span class="chip">APIs</span>
+          <span class="chip">Auth</span>
+        </div>
+      </article>
+
+      <article class="skill reveal" data-delay="0.35" data-level="65">
+        <header class="skill-head">
+          <span class="icon-wrap" aria-hidden="true">🗄️</span>
+          <h3>MySQL / MongoDB</h3>
+          <span class="badge skill-num">0%</span>
+        </header>
+        <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="fill"></span>
+        </div>
+        <div class="skill-tools">
+          <span class="chip">ORM</span>
+          <span class="chip">Índices</span>
+          <span class="chip">Consultas</span>
+        </div>
+      </article>
+
+      <article class="skill reveal" data-delay="0.40" data-level="55">
+        <header class="skill-head">
+          <span class="icon-wrap" aria-hidden="true">📱</span>
+          <h3>Flutter</h3>
+          <span class="badge skill-num">0%</span>
+        </header>
+        <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="fill"></span>
+        </div>
+        <div class="skill-tools">
+          <span class="chip">Widgets</span>
+          <span class="chip">Estado</span>
+          <span class="chip">UI</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 Thomas Castillo. Todos los derechos reservados.</p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre mí | Thomas Castillo</title>
+  <link rel="icon" href="../assets/img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="mainNav" aria-label="Navegación principal">
+  <a class="logo" href="../index.html">Thomas</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú de navegación">
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+    <span class="nav-toggle__bar" aria-hidden="true"></span>
+  </button>
+  <ul id="navMenu" class="nav-links" role="list">
+    <li><a href="sobre-mi.html">Sobre mí</a></li>
+    <li><a href="habilidades.html">Habilidades</a></li>
+    <li><a href="curriculum.html">Currículum</a></li>
+    <li><a href="certificaciones.html">Certificaciones</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li class="nav-cta"><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <div class="nav-backdrop" hidden></div>
+</nav>
+
+<main>
+  <section id="about" class="about panel bg-stack" aria-label="Sobre mí">
+    <div class="about-wrap">
+      <div class="about-media reveal" data-delay="0.05">
+        <div class="portrait">
+          <img src="../assets/img/my-profile-img.jpg" alt="Retrato de Thomas Castillo" loading="lazy" decoding="async">
+        </div>
+        <div class="blob" aria-hidden="true"></div>
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow reveal" data-delay="0.10">Sobre mí</p>
+        <h2 class="headline reveal" data-delay="0.15">Diseñador UI/UX y Desarrollador Web</h2>
+        <p class="lede reveal" data-delay="0.20">
+          Estudiante de Ingeniería de Software. Creo experiencias digitales
+          <b>elegantes, rápidas y centradas en el usuario</b>, cuidando cada detalle
+          desde la idea hasta el despliegue.
+        </p>
+
+        <ul class="facts" role="list">
+          <li class="reveal" data-delay="0.25">🎂 16 ene 2005</li>
+          <li class="reveal" data-delay="0.30">📍 Bogotá D.C, Colombia</li>
+          <li class="reveal fact-github" data-delay="0.35">
+            <a href="https://github.com/thomys57364" target="_blank" rel="noopener noreferrer" aria-label="Perfil de GitHub de thomys57364">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/>
+              </svg>
+              github.com/thomys57364
+            </a>
+          </li>
+          <li class="reveal" data-delay="0.40">✉️ <span id="emailText">tc57364@gmail.com</span></li>
+          <li class="reveal" data-delay="0.45">📞 +57 301 218 5521</li>
+          <li class="reveal" data-delay="0.50">💼 Freelance disponible</li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="btn primary reveal" data-delay="0.55" href="contacto.html">Trabajemos</a>
+          <button class="btn ghost reveal" data-delay="0.60" id="copyEmail" type="button">Copiar email</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 Thomas Castillo. Todos los derechos reservados.</p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
