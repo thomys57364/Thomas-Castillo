@@ -44,18 +44,11 @@
     const backdrop = nav?.querySelector('.nav-backdrop');
     if (!nav || !btn || !list || !backdrop) return;
 
-    const sbw = () => Math.max(0, window.innerWidth - document.documentElement.clientWidth);
-
     const open = () => {
-      const y = window.scrollY || 0;
-      document.body.dataset.lockY = String(y);
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${y}px`;
-      document.body.style.width = '100%';
-      document.body.style.paddingRight = sbw() + 'px';
       nav.classList.add('open');
       btn.setAttribute('aria-expanded', 'true');
       backdrop.hidden = false;
+      document.body.classList.add('nav-open');
       list.querySelector('a[href], button:not([disabled])')?.focus();
     };
 
@@ -63,13 +56,7 @@
       nav.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
       backdrop.hidden = true;
-      const y = parseInt(document.body.dataset.lockY || '0', 10);
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
-      document.body.style.paddingRight = '';
-      delete document.body.dataset.lockY;
-      window.scrollTo(0, y);
+      document.body.classList.remove('nav-open');
       btn.focus({ preventScroll: true });
     };
 

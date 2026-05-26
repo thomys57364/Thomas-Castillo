@@ -1211,11 +1211,28 @@ main {
   .navbar { transform: translateY(0) !important; opacity: 1 !important; }
 }
 
-/* 12. Móvil: secciones contenidas en viewport, scroll interno */
+/* 12. Móvil: layout natural — la página hace scroll, el footer fluye al final del contenido */
 @media (max-width: 900px) {
-  .panel { flex: 1 1 0 !important; overflow-x: hidden !important; overflow-y: auto !important; }
-  .about.panel, #skills.panel, #services.panel, #contact.panel {
-    justify-content: flex-start !important;
+  body  { display: block !important; }
+  main  { display: block !important; }
+  .panel {
+    flex: none !important;
+    overflow-x: hidden;
+    overflow-y: visible !important;
+    min-height: 0 !important;
+  }
+  /* Hero recupera su altura de pantalla completa */
+  .hero { min-height: 100svh !important; }
+
+  /* Contacto: bloque normal para que el contenido no quede recortado */
+  #contact.panel {
+    display: block !important;
+    align-items: flex-start !important;
+  }
+  /* Tarjetas de contacto: una columna en móvil */
+  .contact-cards--duo {
+    grid-template-columns: 1fr !important;
+    max-width: 340px;
   }
 }
 
