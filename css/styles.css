@@ -116,7 +116,7 @@
     position:relative; min-height:88vh;
     display:grid; place-items:center;
     padding:8rem 1.5rem 4rem;
-    overflow:clip; isolation:isolate;
+    overflow:hidden; isolation:isolate;
     background:
       radial-gradient(1200px 600px at 20% 10%, #e9f0ff 0%, transparent 60%),
       radial-gradient(900px 500px at 80% 20%, #f7f7ff 0%, transparent 55%),
@@ -1223,8 +1223,30 @@ main {
     overflow-y: visible !important;
     min-height: 0 !important;
   }
-  /* Hero recupera su altura de pantalla completa */
-  .hero { min-height: 100svh !important; }
+
+  /* Hero: pantalla completa, bloques de fondo contenidos */
+  .hero {
+    min-height: 100svh !important;
+    overflow: hidden !important; /* clip universal — evita blobs fuera de pantalla */
+  }
+  /* Tarjeta hero: nunca más ancha que la pantalla */
+  .hero-card {
+    width: calc(100vw - 3rem) !important; /* = 100vw - 2 × 1.5rem padding del hero */
+    max-width: 480px;
+    box-sizing: border-box;
+  }
+  /* Botones CTA: siempre en columna y sin desbordarse */
+  .hero-cta {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+  }
+  .hero-btn {
+    width: min(300px, 88%) !important;
+    display: flex !important;
+    justify-content: center !important;
+    box-sizing: border-box;
+  }
 
   /* Contacto: bloque normal para que el contenido no quede recortado */
   #contact.panel {

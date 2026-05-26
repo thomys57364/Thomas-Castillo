@@ -106,17 +106,24 @@
 
     const heroIO = new IntersectionObserver((entries) => {
       entries.forEach(({ isIntersecting }) => {
-        card.classList.toggle('revealed', isIntersecting);
-        hero.classList.toggle('revealed', isIntersecting);
-        if (!isIntersecting) {
-          $$('.hero-card [data-animate]').forEach(el => el.style.transitionDelay = '');
+        if (isIntersecting) {
+          card.classList.add('revealed');
+          hero.classList.add('revealed');
+          heroIO.disconnect(); // reveal de una sola vez; evita revertir al hacer scroll
         }
       });
     }, { threshold: 0.25 });
     heroIO.observe(hero);
 
-    if (!prefersReduced && !matchMedia('(pointer: coarse)').matches) {
-      const blobs = $$('.hero-blob', hero);
+    const blobs = $$('.hero-blob', hero);
+    const resetParallax = () => {
+      card.style.transform = '';
+      blobs.forEach(b => b.style.transform = '');
+    };
+    // Resetear si hay contacto táctil (evita que quede en posición incorrecta)
+    hero.addEventListener('touchstart', resetParallax, { passive: true });
+
+    if (!prefersReduced && matchMedia('(hover: hover) and (pointer: fine)').matches) {
       let raf = 0;
       hero.addEventListener('mousemove', (e) => {
         cancelAnimationFrame(raf);
@@ -129,10 +136,7 @@
           if (blobs[1]) blobs[1].style.transform = `translate(${rx * 30}px, ${ry * -20}px)`;
         });
       });
-      hero.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-        blobs.forEach(b => b.style.transform = '');
-      });
+      hero.addEventListener('mouseleave', resetParallax);
     }
   })();
 
