@@ -1,4 +1,34 @@
 
+/* ===== MODO OSCURO ===== */
+(() => {
+  const html = document.documentElement;
+  const STORAGE_KEY = 'tc-dark-mode';
+
+  const apply = (dark) => {
+    html.classList.toggle('dark', dark);
+    document.querySelectorAll('.dark-toggle').forEach(btn => {
+      const icon = btn.querySelector('.dark-icon');
+      if (icon) icon.textContent = dark ? '☀️' : '🌙';
+      btn.setAttribute('aria-label', dark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+      btn.setAttribute('title', dark ? 'Modo claro' : 'Modo oscuro');
+    });
+  };
+
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved !== null) {
+    apply(saved === '1');
+  } else {
+    apply(matchMedia('(prefers-color-scheme: dark)').matches);
+  }
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.dark-toggle')) return;
+    const isDark = html.classList.contains('dark');
+    apply(!isDark);
+    localStorage.setItem(STORAGE_KEY, isDark ? '0' : '1');
+  });
+})();
+
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
@@ -164,15 +194,9 @@
     const outsideCV = $$('.reveal').filter(n => !n.closest('.js-reveal-once'));
     reveal(null, outsideCV, false);
 
-    /* Elementos dentro del CV: separar los que están dentro/fuera del scroll container */
-    const resumeWrap = document.querySelector('.resume-wrap');
-    const insideCV   = $$('.js-reveal-once .reveal');
-    if (insideCV.length) {
-      const inWrap  = insideCV.filter(n => !!n.closest('.resume-wrap'));
-      const outWrap = insideCV.filter(n => !n.closest('.resume-wrap'));
-      if (outWrap.length) reveal(null, outWrap, true);
-      if (resumeWrap && inWrap.length) reveal(resumeWrap, inWrap, true);
-    }
+    /* Elementos dentro del CV: todos usan el viewport como root (sin scroll interno) */
+    const insideCV = $$('.js-reveal-once .reveal');
+    if (insideCV.length) reveal(null, insideCV, true);
   })();
 
   /* ===== SKILLS ===== */
@@ -375,5 +399,43 @@
         setTimeout(() => (btn.textContent = prev), 1400);
       } catch { /* noop */ }
     });
+  });
+})();
+
+/* ===== TC MOBILE NAV (circle expansion) ===== */
+(() => {
+  const nav = document.querySelector('.js-tc-mnav');
+  if (!nav) return;
+  const btn = nav.querySelector('.tc-mnav__btn');
+  const links = nav.querySelectorAll('.tc-mnav__link');
+  if (!btn) return;
+
+  const filename = location.pathname.split('/').pop() || 'index.html';
+  links.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === filename);
+  });
+
+  const open = () => {
+    nav.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.setAttribute('aria-label', 'Cerrar menú');
+    document.body.classList.add('modal-open');
+  };
+
+  const close = () => {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Abrir menú de navegación');
+    document.body.classList.remove('modal-open');
+  };
+
+  btn.addEventListener('click', () => {
+    nav.classList.contains('open') ? close() : open();
+  });
+
+  links.forEach(a => a.addEventListener('click', close));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { e.preventDefault(); close(); }
   });
 })();

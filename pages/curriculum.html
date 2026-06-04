@@ -6,17 +6,12 @@
   <title>Currículum | Thomas Castillo</title>
   <link rel="icon" href="../assets/img/favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css?v=4">
+  <link rel="stylesheet" href="../css/styles.css?v=6">
 </head>
 <body>
 
 <nav class="navbar" id="mainNav" aria-label="Navegación principal">
   <a class="logo" href="../index.html">Thomas</a>
-  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú de navegación">
-    <span class="nav-toggle__bar" aria-hidden="true"></span>
-    <span class="nav-toggle__bar" aria-hidden="true"></span>
-    <span class="nav-toggle__bar" aria-hidden="true"></span>
-  </button>
   <ul id="navMenu" class="nav-links" role="list">
     <li><a href="sobre-mi.html">Sobre mí</a></li>
     <li><a href="habilidades.html">Habilidades</a></li>
@@ -25,6 +20,16 @@
     <li><a href="servicios.html">Servicios</a></li>
     <li class="nav-cta"><a href="contacto.html">Contacto</a></li>
   </ul>
+  <div class="nav-right">
+    <button class="dark-toggle" type="button" aria-label="Cambiar a modo oscuro" title="Modo oscuro">
+      <span class="dark-icon" aria-hidden="true">🌙</span>
+    </button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú de navegación">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+    </button>
+  </div>
   <div class="nav-backdrop" hidden></div>
 </nav>
 
@@ -51,7 +56,6 @@
           </div>
           <ul class="cv-list" aria-label="Datos de contacto" role="list">
             <li>📍 Bogotá D.C, Colombia</li>
-            <li>📞 +57 301 218 5521</li>
             <li>✉️ <b id="cvEmail">tc57364@gmail.com</b></li>
             <li>
               <a href="https://github.com/thomys57364" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.4rem;color:#24292e;font-weight:700;text-decoration:none;">
@@ -147,9 +151,27 @@
 </main>
 
 <footer class="site-footer">
-  <p>© 2025 Thomas Castillo. Todos los derechos reservados.</p>
+  <p>© 2026 Thomas Castillo. Todos los derechos reservados.</p>
 </footer>
 
-<script src="../js/script.js?v=3"></script>
+<nav class="tc-mnav js-tc-mnav" aria-label="Menú móvil">
+  <div class="tc-mnav__dot" aria-hidden="true"></div>
+  <button class="tc-mnav__btn" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+    <span class="tc-mnav__bar" aria-hidden="true"></span>
+    <span class="tc-mnav__bar" aria-hidden="true"></span>
+    <span class="tc-mnav__bar" aria-hidden="true"></span>
+  </button>
+  <div class="tc-mnav__panel">
+    <a class="tc-mnav__link" href="../index.html">Inicio</a>
+    <a class="tc-mnav__link" href="sobre-mi.html">Sobre mí</a>
+    <a class="tc-mnav__link" href="habilidades.html">Habilidades</a>
+    <a class="tc-mnav__link" href="curriculum.html">Currículum</a>
+    <a class="tc-mnav__link" href="certificaciones.html">Certificaciones</a>
+    <a class="tc-mnav__link" href="servicios.html">Servicios</a>
+    <a class="tc-mnav__link" href="contacto.html">Contacto</a>
+  </div>
+</nav>
+
+<script src="../js/script.js?v=5"></script>
 </body>
 </html>
