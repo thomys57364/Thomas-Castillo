@@ -112,4 +112,4 @@ npx serve .
 
 **Thomas Castillo**
 Estudiante de Ingeniería de Software — Universidad Manuela Beltrán, Bogotá
-[github.com/thomys57364](https://github.com/thomys57364) · tc57364@gmail.com
+[github.com/thomys57364](https://github.com/thomys57364) · thomas.castillo.lc@gmail.com
